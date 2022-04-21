@@ -1,3 +1,11 @@
 from django.db import models
 
 # Create your models here.
+
+class Game(models.Model):
+    title = models.CharField(max_length=200)
+    about = models.CharField(max_length=2000)
+    perspective = models.CharField(max_length=50)
+    release_date = models.DateField(null=True)
+    coverart = models.URLField(max_length=500)
+    expansions = models.CharField(max_length=200)
