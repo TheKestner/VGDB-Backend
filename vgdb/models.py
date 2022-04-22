@@ -18,3 +18,8 @@ class Franchise(models.Model):
 class Company(models.Model):
     name = models.CharField(max_length=200, blank=True)
     about = models.CharField(max_length=2000, blank=True)
+
+class Review(models.model):
+    opinion = models.CharField(max_length=3000, blank=True)
+    review_date = models.DateField(null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
