@@ -18,3 +18,15 @@ class Franchise(models.Model):
 class Company(models.Model):
     name = models.CharField(max_length=200, blank=True)
     about = models.CharField(max_length=2000, blank=True)
+
+class Platforms(models.Model):
+    name = models.CharField(max_length=200, blank=True)
+
+class Screenshots(models.Model):
+    image = models.URLField(max_length=500, null=True)
+
+class Genre(models.Model):
+    title = models.CharField(max_length=200, blank=True)
+
+class Mode(models.Model):
+    name = models.CharField(max_length=200, blank=True)
