@@ -8,13 +8,13 @@ class Game(models.Model):
     perspective = models.CharField(max_length=50)
     release_date = models.DateField(null=True)
     coverart = models.URLField(max_length=500)
-    expansions = models.CharField(max_length=200)
-    franchise = models.ForeignKey('Franchise', on_delete=models.CASCADE)
-    company = models.ForeignKey('Company', on_delete=models.CASCADE)
+    expansions = models.CharField(max_length=200, blank=True)
+    franchise = models.ForeignKey('Franchise', on_delete=models.CASCADE, null=True)
+    company = models.ForeignKey('Company', on_delete=models.CASCADE, null=True)
 
 class Franchise(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, blank=True)
 
 class Company(models.Model):
-    name = models.CharField(max_length=200)
-    about = models.CharField(max_length=2000)
+    name = models.CharField(max_length=200, blank=True)
+    about = models.CharField(max_length=2000, blank=True)
