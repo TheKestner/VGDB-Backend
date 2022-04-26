@@ -4,5 +4,5 @@ from rest_framework import serializers
 class GameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
-        field ='__all__'
+        fields ='__all__'
 
