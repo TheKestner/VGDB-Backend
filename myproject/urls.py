@@ -20,6 +20,12 @@ from vgdb import views
 
 router = routers.DefaultRouter()
 router.register(r'game', views.GameViewSet)
+router.register(r'genre', views.GenreViewSet)
+router.register(r'platform', views.PlatformViewSet)
+router.register(r'mode', views.ModeViewSet)
+router.register(r'screenshot', views.ScreenshotViewSet)
+
+
 
 urlpatterns = [
     path('', include(router.urls)),
