@@ -2,6 +2,14 @@ from .models import *
 from rest_framework import serializers
 
 class GameSerializer(serializers.ModelSerializer):
+    genre = serializers.StringRelatedField(many=True)
+    mode = serializers.StringRelatedField(many=True)
+    platforms = serializers.StringRelatedField(many=True)
+    screenshot = serializers.StringRelatedField(many=True)
+    company = serializers.StringRelatedField(many=False)
+    franchise = serializers.StringRelatedField(many=False)
+
+
     class Meta:
         model = Game
         fields ='__all__'

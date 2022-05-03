@@ -43,6 +43,9 @@ class Platform(models.Model):
 class Screenshot(models.Model):
     image = models.URLField(max_length=500, null=True)
 
+    def __str__(self):
+        return self.image
+
 class Genre(models.Model):
     title = models.CharField(max_length=200, blank=True)
 
