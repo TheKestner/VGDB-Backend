@@ -8,11 +8,14 @@ class GameSerializer(serializers.ModelSerializer):
     screenshot = serializers.StringRelatedField(many=True)
     company = serializers.StringRelatedField(many=False)
     franchise = serializers.StringRelatedField(many=False)
-
+    release_date = serializers.SerializerMethodField('change_date')
 
     class Meta:
         model = Game
         fields ='__all__'
+
+    def change_date(self, obj):
+        return obj.release_date.strftime("%b %d, %Y")
 
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
