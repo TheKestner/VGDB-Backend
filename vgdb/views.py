@@ -5,6 +5,8 @@ from rest_framework import permissions
 from .serializers import GameSerializer, GenreSerializer, PlatformSerializer, ModeSerializer, ScreenshotSerializer
 from .models import *
 
+from rest_framework import filters
+
 # Create your views here.
 
 class GameViewSet(viewsets.ModelViewSet):
@@ -13,6 +15,8 @@ class GameViewSet(viewsets.ModelViewSet):
     """
     queryset = Game.objects.all()
     serializer_class = GameSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title']
 
 class GenreViewSet(viewsets.ModelViewSet):
     """
@@ -41,4 +45,9 @@ class ScreenshotViewSet(viewsets.ModelViewSet):
     """
     queryset = Screenshot.objects.all()
     serializer_class = ScreenshotSerializer
+
+# class SearchlistView(viewsets.ModelViewSet):
+#     queryset = Game.objects.all()
+#     serializer_class = GameSerializer
+#     filter_backends = [filters.SearchFilter]
 
