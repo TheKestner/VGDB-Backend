@@ -16,7 +16,7 @@ class GameViewSet(viewsets.ModelViewSet):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ['title']
+    search_fields = ['title', 'genre', 'platform']
 
 class GenreViewSet(viewsets.ModelViewSet):
     """
