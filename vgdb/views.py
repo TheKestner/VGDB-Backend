@@ -46,8 +46,5 @@ class ScreenshotViewSet(viewsets.ModelViewSet):
     queryset = Screenshot.objects.all()
     serializer_class = ScreenshotSerializer
 
-# class SearchlistView(viewsets.ModelViewSet):
-#     queryset = Game.objects.all()
-#     serializer_class = GameSerializer
-#     filter_backends = [filters.SearchFilter]
+
 
