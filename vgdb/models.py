@@ -62,3 +62,6 @@ class Mode(models.Model):
 class Fav(models.Model):
     game = models.ForeignKey('Game', on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.game
