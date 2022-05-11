@@ -18,7 +18,13 @@ debugpy==1.5.1
 decorator==5.1.1
 defusedxml==0.7.1
 distlib==0.3.4
+dj-database-url==0.5.0
 Django==4.0.4
+django-cors-headers==3.12.0
+django-environ==0.8.1
+django-filter==21.1
+django-heroku==0.3.1
+djangorestframework==3.13.1
 docutils==0.18.1
 entrypoints==0.4
 executing==0.8.3
@@ -78,6 +84,7 @@ pylint==2.12.2
 pyparsing==3.0.7
 pyrsistent==0.18.1
 python-dateutil==2.8.2
+pytz==2022.1
 PyYAML==6.0
 pyzmq==22.3.0
 readme-renderer==33.0
@@ -107,5 +114,6 @@ virtualenv==20.13.2
 virtualenv-clone==0.5.7
 wcwidth==0.2.5
 webencodings==0.5.1
+whitenoise==6.1.0
 wrapt==1.13.3
 zipp==3.7.0
