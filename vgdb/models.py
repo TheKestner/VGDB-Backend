@@ -10,7 +10,7 @@ class Game(models.Model):
     release_date = models.DateField(null=True)
     coverart = models.URLField(max_length=500)
     expansions = models.CharField(max_length=200, blank=True)
-    franchise = models.ForeignKey('Franchise', on_delete=models.CASCADE, blank=True)
+    franchise = models.ForeignKey('Franchise', on_delete=models.CASCADE, null=True)
     company = models.ForeignKey('Company', on_delete=models.CASCADE, null=True)
     platforms = models.ManyToManyField('Platform', blank=True)
     screenshot = models.ManyToManyField('Screenshot', blank=True)
@@ -59,6 +59,7 @@ class Mode(models.Model):
     def __str__(self):
         return self.name
 
+# only user model
 class Fav(models.Model):
     game = models.ForeignKey('Game', on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)

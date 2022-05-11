@@ -37,4 +37,9 @@ class ScreenshotSerializer(serializers.ModelSerializer):
         model = Screenshot
         fields ='__all__'
 
+class FavSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Fav
+        fields ='__all__'
+
 
