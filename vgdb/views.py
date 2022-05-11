@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import GameSerializer, GenreSerializer, PlatformSerializer, ModeSerializer, ScreenshotSerializer
+from .serializers import GameSerializer, GenreSerializer, PlatformSerializer, ModeSerializer, ScreenshotSerializer, FavSerializer
 from .models import *
 
 from rest_framework import filters
@@ -46,8 +46,12 @@ class ScreenshotViewSet(viewsets.ModelViewSet):
     queryset = Screenshot.objects.all()
     serializer_class = ScreenshotSerializer
 
-# class SearchlistView(viewsets.ModelViewSet):
-#     queryset = Game.objects.all()
-#     serializer_class = GameSerializer
-#     filter_backends = [filters.SearchFilter]
+class FavViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allow games to be viewed.
+    """
+    queryset = Fav.objects.all()
+    serializer_class = FavSerializer
+
+
 
