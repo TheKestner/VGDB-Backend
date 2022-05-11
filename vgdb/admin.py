@@ -7,6 +7,7 @@ from .models import Platform
 from .models import Screenshot
 from .models import Genre
 from .models import Mode
+from .models import Fav
 
 # Register your models here.
 
@@ -17,3 +18,4 @@ admin.site.register(Platform)
 admin.site.register(Screenshot)
 admin.site.register(Genre)
 admin.site.register(Mode)
+admin.site.register(Fav)
