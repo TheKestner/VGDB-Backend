@@ -24,6 +24,7 @@ router.register(r'genre', views.GenreViewSet)
 router.register(r'platform', views.PlatformViewSet)
 router.register(r'mode', views.ModeViewSet)
 router.register(r'screenshot', views.ScreenshotViewSet)
+router.register(r'fav', views.FavViewSet)
 
 
 
